@@ -88,7 +88,7 @@ export default function App() {
           <button
             disabled={!playerName.trim()}
             onClick={() => {
-              const socket = new WebSocket("ws://localhost:8000/ws");
+              const socket = new WebSocket("wss://connected-game.onrender.com/ws");
 
               socket.onopen = () => {
                 socket.send(
