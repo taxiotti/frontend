@@ -235,7 +235,7 @@ export default function App() {
                   ) : (
                     <>
                       <span className="text-amber-400 font-medium">
-                        {m.player_name}
+                        {m.player_name}:
                       </span>{" "}
                       {m.message}
                     </>
