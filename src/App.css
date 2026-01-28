@@ -1,0 +1,103 @@
+/* Reset leve */
+* {
+  box-sizing: border-box;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  background: radial-gradient(1200px circle at top, #0f172a, #020617);
+  color: #e5e7eb;
+  margin: 0;
+}
+
+/* Container principal (sem exigir classe nova) */
+main, .container, .game-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* Cartões / áreas do jogo */
+section, .card, .panel {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(10px);
+}
+
+/* Títulos */
+h1, h2, h3 {
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  margin-top: 0;
+}
+
+/* Inputs */
+input, select, textarea {
+  width: 100%;
+  background: #020617;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  color: #e5e7eb;
+  padding: 12px 14px;
+  border-radius: 10px;
+  outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25);
+}
+
+/* Botões — sem “cara de chat” */
+button {
+  background: linear-gradient(135deg, #38bdf8, #2563eb);
+  color: #020617;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
+  opacity: 0.95;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Botões secundários (se já existir classe) */
+button.secondary {
+  background: transparent;
+  color: #93c5fd;
+  border: 1px solid rgba(147, 197, 253, 0.4);
+}
+
+/* Layouts comuns sem mexer no DOM */
+.actions, .buttons, .controls {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Mensagens de status */
+.success {
+  color: #22c55e;
+}
+
+.error {
+  color: #ef4444;
+}
+
+.warning {
+  color: #facc15;
+}
